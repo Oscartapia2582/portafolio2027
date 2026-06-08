@@ -34,7 +34,7 @@ const CONFIG = {
   /* ──────────────────────────────────────────
      📸 FOTO — Pon tu foto en assets/img/
   ────────────────────────────────────────── */
-  photo: "assets/img/oscar-tapia.jpg",   // ← Cambia por tu foto real
+  photo: "assetsimgoscar-tapia.jpg",   // ← Cambia por tu foto real
   photoAlt: "Oscar Tapia — Diseñador Gráfico Senior",
 
   /* ──────────────────────────────────────────
