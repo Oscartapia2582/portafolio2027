@@ -26,7 +26,7 @@ const CONFIG = {
   profession:  "Diseñador Gráfico Senior",
 
   bio: [
-    "Soy <strong>Oscar Tapia</strong>, Diseñador Gráfico Senior con más de 8 años de experiencia transformando ideas en marcas poderosas y estrategias digitales que generan resultados reales.",
+    "Soy <strong>Oscar Tapia</strong>, Diseñador Gráfico Senior con más de 9 años de experiencia transformando ideas en marcas poderosas y estrategias digitales que generan resultados reales.",
     "Mi enfoque combina <strong>diseño de alto impacto</strong> con una sólida comprensión del marketing digital, lo que me permite crear piezas visuales que no solo se ven bien, sino que también <strong>convierten y conectan</strong> con el público objetivo.",
     "Trabajo con empresas, startups y emprendedores que quieren destacar en mercados competitivos. Desde identidad de marca hasta campañas de Google Ads, ofrezco soluciones <strong>integrales y medibles</strong>."
   ],
@@ -34,7 +34,7 @@ const CONFIG = {
   /* ──────────────────────────────────────────
      📸 FOTO — Pon tu foto en assets/img/
   ────────────────────────────────────────── */
-  photo: "oscar-tapia.jpg",   // ← Cambia por tu foto real
+  photo: "assets/img/oscar-tapia.jpg",   // ← Cambia por tu foto real
   photoAlt: "Oscar Tapia — Diseñador Gráfico Senior",
 
   /* ──────────────────────────────────────────
