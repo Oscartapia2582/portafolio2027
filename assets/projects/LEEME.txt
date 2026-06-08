@@ -1,0 +1,5 @@
+Coloca aquí las imágenes de tus proyectos.
+Formato recomendado: .jpg o .webp
+Tamaño: 1200x750px - Peso máximo: 200KB por imagen
+Nombra cada imagen igual al "id" del proyecto en projects.json
+Ejemplo: techcorp-rebrand.jpg, cafepremium-branding.jpg

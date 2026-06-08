@@ -1,0 +1,11 @@
+# Robots.txt — Oscar Tapia Portfolio
+# https://oscartapia.design
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://oscartapia.design/sitemap.xml
+
+# Disallow admin areas (si añades en el futuro)
+# Disallow: /admin/

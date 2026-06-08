@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <!-- ============================================================
+       SEO & META — Oscar Tapia Portfolio
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary SEO -->
+  <title>Oscar Tapia — Diseñador Gráfico Senior | Marketing Digital | Branding</title>
+  <meta name="description" content="Portafolio profesional de Oscar Tapia. Diseñador Gráfico Senior especializado en Branding, Marketing Digital, Google Ads, Community Management e IA aplicada al Marketing.">
+  <meta name="keywords" content="Diseñador Gráfico Senior, Branding, Marketing Digital, Google Ads, Community Manager, Copywriter, Diseño Web, IA Marketing, Diseño Publicitario, Identidad Visual">
+  <meta name="author" content="Oscar Tapia">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#00E5CC">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oscartapia.design">
+  <meta property="og:title" content="Oscar Tapia — Diseñador Gráfico Senior | Marketing Digital">
+  <meta property="og:description" content="Portafolio premium de Oscar Tapia. Branding, Marketing Digital, Diseño Publicitario, Community Management e IA aplicada al Marketing.">
+  <meta property="og:image" content="https://oscartapia.design/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Oscar Tapia Portfolio — Diseñador Gráfico Senior">
+  <meta property="og:locale" content="es_DO">
+  <meta property="og:site_name" content="Oscar Tapia Portfolio">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@oscartapia">
+  <meta name="twitter:creator" content="@oscartapia">
+  <meta name="twitter:url" content="https://oscartapia.design">
+  <meta name="twitter:title" content="Oscar Tapia — Diseñador Gráfico Senior">
+  <meta name="twitter:description" content="Portafolio premium. Branding, Marketing Digital, Google Ads, Community Management e IA.">
+  <meta name="twitter:image" content="https://oscartapia.design/assets/img/og-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://oscartapia.design">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Oscar Tapia",
+    "jobTitle": "Diseñador Gráfico Senior",
+    "url": "https://oscartapia.design",
+    "email": "oscar@oscartapia.design",
+    "description": "Diseñador Gráfico Senior especializado en Branding, Marketing Digital, Community Management e IA aplicada al Marketing",
+    "image": "https://oscartapia.design/assets/img/oscar-tapia.jpg",
+    "sameAs": [
+      "https://www.behance.net/oscartapia",
+      "https://www.linkedin.com/in/oscartapia",
+      "https://www.instagram.com/oscartapia"
+    ],
+    "knowsAbout": [
+      "Diseño Gráfico", "Branding", "Marketing Digital",
+      "Google Ads", "Google Analytics", "Community Management",
+      "Copywriting", "Diseño Web", "Inteligencia Artificial"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "Servicios de Diseño Gráfico, Branding y Marketing Digital"
+    }
+  }
+  </script>
+
+  <!-- Preconnect performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080C10'/%3E%3Ctext x='50%25' y='56%25' font-size='18' text-anchor='middle' dominant-baseline='middle' fill='%2300E5CC' font-family='sans-serif' font-weight='bold'%3EOT%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       LOADER
+       ============================================================ -->
+  <div class="loader" aria-hidden="true" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo">Oscar<span>.</span></div>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+      <p class="loader__text">Cargando portafolio</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CURSOR PERSONALIZADO
+       ============================================================ -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       LIGHTBOX — Sistema de proyectos externos
+       Soporta: Behance, Figma, Canva, Power BI, Looker, Notion, Framer, Google Slides
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+    <div class="lb__inner">
+
+      <!-- Header del lightbox -->
+      <div class="lb__header">
+        <div class="lb__header-left">
+          <span class="lb__source-badge" id="lb-source">Proyecto</span>
+          <h2 class="lb__title" id="lb-title">Título del Proyecto</h2>
+        </div>
+        <div class="lb__header-right">
+          <a href="#" id="lb-ext-link" target="_blank" rel="noopener noreferrer" class="lb__ext-link" aria-label="Abrir en nueva pestaña">
+            Abrir ↗
+          </a>
+          <button class="lb__close" id="lb-close" aria-label="Cerrar">✕</button>
+        </div>
+      </div>
+
+      <!-- Body: media + info sidebar -->
+      <div class="lb__body">
+        <div class="lb__media" id="lb-media">
+          <!-- Contenido cargado dinámicamente por JS -->
+        </div>
+        <div class="lb__info" id="lb-info">
+          <!-- Info cargada dinámicamente por JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVEGACIÓN
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+
+      <a href="#inicio" class="nav__logo" aria-label="Ir al inicio">
+        <div class="nav__dot" aria-hidden="true"></div>
+        <span data-bind="name">Oscar Tapia</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#sobre-mi"   class="nav__link">Sobre mí</a></li>
+        <li><a href="#servicios"  class="nav__link">Servicios</a></li>
+        <li><a href="#portfolio"  class="nav__link">Portfolio</a></li>
+        <li><a href="#habilidades" class="nav__link">Skills</a></li>
+        <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
+        <li><a href="#contacto"   class="nav__link">Contacto</a></li>
+      </ul>
+
+      <a href="#contacto" class="nav__cta">Trabajemos juntos</a>
+
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Menú Mobile -->
+    <div class="nav__mobile" aria-hidden="true" id="nav-mobile">
+      <a href="#sobre-mi"    class="nav__link">Sobre mí</a>
+      <a href="#servicios"   class="nav__link">Servicios</a>
+      <a href="#portfolio"   class="nav__link">Portfolio</a>
+      <a href="#habilidades" class="nav__link">Skills</a>
+      <a href="#testimonios" class="nav__link">Testimonios</a>
+      <a href="#contacto"    class="nav__link">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="inicio" aria-label="Presentación principal">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+      <div class="hero__content">
+
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Disponible para proyectos
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line">Diseño que</span>
+          <span class="line t-accent">convierte</span>
+          <span class="line t-outline">y conecta</span>
+        </h1>
+
+        <p class="hero__desc">
+          Soy <span data-bind="name">Oscar Tapia</span>,
+          <strong><span data-typing aria-live="polite">Diseñador Gráfico</span></strong>
+          con más de 8 años creando marcas poderosas, estrategias digitales y
+          experiencias visuales que generan resultados reales.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#portfolio" class="btn btn--primary">
+            Ver Portfolio
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contacto" class="btn btn--ghost">Trabajemos juntos</a>
+          <a href="#" data-href="social.behance" class="btn btn--outline" target="_blank" rel="noopener">
+            Ver Behance ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero__stats" aria-label="Estadísticas profesionales">
+        <div class="hero__stat-item" data-stat="0">
+          <div class="hero__stat-n">
+            <span data-count="8" data-suffix="+">8+</span>
+          </div>
+          <div class="hero__stat-l">Años de experiencia</div>
+        </div>
+        <div class="hero__stat-item" data-stat="1">
+          <div class="hero__stat-n">
+            <span data-count="120" data-suffix="+">120+</span>
+          </div>
+          <div class="hero__stat-l">Proyectos completados</div>
+        </div>
+        <div class="hero__stat-item" data-stat="2">
+          <div class="hero__stat-n">
+            <span data-count="50" data-suffix="+">50+</span>
+          </div>
+          <div class="hero__stat-l">Clientes satisfechos</div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MARQUEE
+         ============================================================ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Diseño Gráfico</span>
+        <span class="marquee-item">Branding</span>
+        <span class="marquee-item">Marketing Digital</span>
+        <span class="marquee-item">Google Ads</span>
+        <span class="marquee-item">Community Manager</span>
+        <span class="marquee-item">Copywriting</span>
+        <span class="marquee-item">Diseño Web</span>
+        <span class="marquee-item">Google Analytics</span>
+        <span class="marquee-item">IA aplicada al Marketing</span>
+        <span class="marquee-item">Estrategia Digital</span>
+        <!-- Duplicado para loop continuo -->
+        <span class="marquee-item">Diseño Gráfico</span>
+        <span class="marquee-item">Branding</span>
+        <span class="marquee-item">Marketing Digital</span>
+        <span class="marquee-item">Google Ads</span>
+        <span class="marquee-item">Community Manager</span>
+        <span class="marquee-item">Copywriting</span>
+        <span class="marquee-item">Diseño Web</span>
+        <span class="marquee-item">Google Analytics</span>
+        <span class="marquee-item">IA aplicada al Marketing</span>
+        <span class="marquee-item">Estrategia Digital</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         SOBRE MÍ
+         ============================================================ -->
+    <section class="about section--lg" id="sobre-mi" aria-label="Sobre mí">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Visual -->
+          <div class="about__visual reveal">
+            <div class="about__img-wrap" id="about-photo">
+              <!-- JS inyecta foto desde CONFIG.photo -->
+              <div class="about__img-placeholder">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 56c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <p>Añade tu foto en<br>assets/img/oscar-tapia.jpg</p>
+              </div>
+            </div>
+
+            <div class="about__badge-float about__badge-float--1" aria-label="Años de experiencia">
+              <div class="about__badge-icon" aria-hidden="true">✦</div>
+              <div>
+                <span class="about__badge-val" data-count="8" data-suffix="+">8+</span>
+                <span class="about__badge-lbl">Años exp.</span>
+              </div>
+            </div>
+
+            <div class="about__badge-float about__badge-float--2" aria-label="Rating de clientes">
+              <div class="about__badge-icon" aria-hidden="true">★</div>
+              <div>
+                <span class="about__badge-val">5.0</span>
+                <span class="about__badge-lbl">Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="reveal reveal--d2">
+            <span class="section-label">/ Sobre mí</span>
+            <h2 class="section-title" style="margin-bottom:24px;">
+              Creativo con<br>mentalidad <span class="t-accent">estratégica</span>
+            </h2>
+
+            <!-- Bio cargada desde CONFIG -->
+            <div id="about-bio">
+              <!-- JS inyecta párrafos desde CONFIG.bio -->
+            </div>
+
+            <!-- Tags de especialidades -->
+            <div class="about__tags" id="about-tags">
+              <!-- JS inyecta tags desde CONFIG.specialties -->
+            </div>
+
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;">
+              <a href="#contacto" class="btn btn--primary">Contratarme</a>
+              <a href="#" data-href="cv" class="btn btn--ghost" download>
+                Descargar CV
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 2v9M4 8l4 4 4-4M2 14h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICIOS — Cargados desde projects.json
+         ============================================================ -->
+    <section class="section" id="servicios" aria-label="Servicios">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-label">/ Servicios</span>
+            <h2 class="section-title">Lo que <span class="t-accent">ofrezco</span></h2>
+          </div>
+          <p class="section-desc">Soluciones creativas y estratégicas para hacer crecer tu marca en el mundo digital.</p>
+        </div>
+        <!-- JS construye tarjetas desde JSON -->
+        <div class="services__grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PORTFOLIO — Grid con filtros, cargado desde JSON
+         ============================================================ -->
+    <section class="portfolio section--lg" id="portfolio" aria-label="Portfolio de proyectos">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-label">/ Portfolio</span>
+            <h2 class="section-title">Proyectos <span class="t-accent">destacados</span></h2>
+          </div>
+          <p class="section-desc">Una selección de trabajos que reflejan mi versatilidad y nivel de detalle.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="portfolio__filters reveal" role="group" aria-label="Filtrar proyectos por categoría">
+          <button class="filter-btn active" data-filter="*">Todos</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="social">Redes Sociales</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+          <button class="filter-btn" data-filter="web">Diseño Web</button>
+          <button class="filter-btn" data-filter="print">Impreso</button>
+        </div>
+
+        <!-- Grid construido por JS desde JSON -->
+        <div class="portfolio__grid reveal" id="portfolio-grid" aria-live="polite">
+          <!-- Proyectos cargados dinámicamente -->
+        </div>
+
+        <div style="text-align:center;margin-top:48px;" class="reveal">
+          <a href="#" data-href="social.behance" target="_blank" rel="noopener" class="btn btn--ghost">
+            Ver más en Behance
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROYECTOS DESTACADOS — Tarjetas tipo Behance
+         ============================================================ -->
+    <section class="section" id="proyectos-destacados" aria-label="Casos de estudio destacados">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-label">/ Casos de Estudio</span>
+            <h2 class="section-title">Proyectos de <span class="t-accent">alto impacto</span></h2>
+          </div>
+          <p class="section-desc">Casos de estudio detallados con estrategia, proceso y resultados medibles.</p>
+        </div>
+
+        <!-- Tarjetas construidas por JS desde JSON (solo proyectos featured:true) -->
+        <div class="featured__grid" id="featured-grid">
+          <!-- Cargado dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HABILIDADES
+         ============================================================ -->
+    <section class="skills section--lg" id="habilidades" aria-label="Habilidades técnicas">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-label">/ Habilidades</span>
+            <h2 class="section-title">Dominio <span class="t-accent">técnico</span></h2>
+          </div>
+        </div>
+
+        <div class="skills__grid">
+
+          <!-- Diseño & Creatividad -->
+          <div class="skill-group reveal reveal--d1">
+            <h3 class="skill-group__title">Diseño & Creatividad</h3>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Adobe Illustrator</span><span class="skill-item__pct">96%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="96"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Adobe Photoshop</span><span class="skill-item__pct">94%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="94"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Figma</span><span class="skill-item__pct">90%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Adobe InDesign</span><span class="skill-item__pct">88%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Canva Pro</span><span class="skill-item__pct">98%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="98"></div></div>
+            </div>
+          </div>
+
+          <!-- Marketing Digital -->
+          <div class="skill-group reveal reveal--d2">
+            <h3 class="skill-group__title">Marketing Digital</h3>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Google Ads</span><span class="skill-item__pct">92%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Google Analytics 4</span><span class="skill-item__pct">88%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Meta Ads Manager</span><span class="skill-item__pct">90%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Looker Studio</span><span class="skill-item__pct">82%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Email Marketing</span><span class="skill-item__pct">86%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="86"></div></div>
+            </div>
+          </div>
+
+          <!-- Estrategia & Contenido -->
+          <div class="skill-group reveal reveal--d3">
+            <h3 class="skill-group__title">Estrategia & Contenido</h3>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Community Management</span><span class="skill-item__pct">95%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Copywriting</span><span class="skill-item__pct">91%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="91"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Brand Strategy</span><span class="skill-item__pct">89%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="89"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">IA aplicada al Marketing</span><span class="skill-item__pct">85%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item__hd"><span class="skill-item__name">Diseño Web (HTML/CSS)</span><span class="skill-item__pct">80%</span></div>
+              <div class="skill-item__bar"><div class="skill-item__fill" data-pct="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="reveal">
+          <p class="skills__tools-title">Herramientas &amp; Plataformas</p>
+          <div class="skills__tools-grid">
+            <div class="tool-pill"><span class="tool-pill__icon">🎨</span> Illustrator</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📸</span> Photoshop</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🖌️</span> Figma</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📄</span> InDesign</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🎭</span> Canva Pro</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🎯</span> Google Ads</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📊</span> Analytics 4</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📈</span> Looker Studio</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📱</span> Meta Ads</div>
+            <div class="tool-pill"><span class="tool-pill__icon">💡</span> ChatGPT</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🤖</span> Midjourney</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🎬</span> Premiere Pro</div>
+            <div class="tool-pill"><span class="tool-pill__icon">⚡</span> After Effects</div>
+            <div class="tool-pill"><span class="tool-pill__icon">📧</span> Mailchimp</div>
+            <div class="tool-pill"><span class="tool-pill__icon">🌐</span> WordPress</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIOS — Cargados desde JSON
+         ============================================================ -->
+    <section class="section" id="testimonios" aria-label="Testimonios de clientes">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <span class="section-label">/ Testimonios</span>
+            <h2 class="section-title">Lo que dicen mis <span class="t-accent">clientes</span></h2>
+          </div>
+          <p class="section-desc">Relaciones de largo plazo construidas sobre resultados reales.</p>
+        </div>
+
+        <div class="testimonials__track-wrap reveal">
+          <div class="testimonials__track" id="testimonials-track">
+            <!-- JS construye tarjetas desde JSON -->
+          </div>
+        </div>
+
+        <div class="t-dots" id="testimonials-dots" aria-label="Navegación de testimonios">
+          <!-- JS construye dots desde JSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CLIENTES — Cargados desde CONFIG.clients
+         ============================================================ -->
+    <section class="section" id="clientes" aria-label="Clientes">
+      <div class="container">
+        <div class="section-header reveal" style="margin-bottom:48px;">
+          <div>
+            <span class="section-label">/ Clientes</span>
+            <h2 class="section-title">Marcas con las que <span class="t-accent">he trabajado</span></h2>
+          </div>
+        </div>
+        <div class="clients__grid" id="clients-grid">
+          <!-- JS construye items desde CONFIG.clients -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO — FormSubmit (sin backend)
+         ============================================================ -->
+    <section class="contact section--lg" id="contacto" aria-label="Sección de contacto">
+      <div class="container">
+        <div class="contact__grid">
+
+          <!-- Info -->
+          <div class="reveal">
+            <span class="section-label">/ Contacto</span>
+            <h2 class="contact__title">
+              ¿Tienes un proyecto<br>en <span>mente</span>?
+            </h2>
+            <p class="contact__desc">
+              Estoy disponible para proyectos freelance, colaboraciones y posiciones full-time.
+              Conversemos sobre cómo puedo ayudarte a alcanzar tus objetivos.
+            </p>
+
+            <div class="contact__methods">
+              <a href="#" data-bind-href="email" class="contact__method" id="contact-email-link">
+                <div class="contact__method-icon" aria-hidden="true">✉</div>
+                <div>
+                  <div class="contact__method-lbl">Email</div>
+                  <div class="contact__method-val" data-bind="email">oscar@oscartapia.design</div>
+                </div>
+              </a>
+
+              <a href="#" data-whatsapp class="contact__method">
+                <div class="contact__method-icon" aria-hidden="true">📱</div>
+                <div>
+                  <div class="contact__method-lbl">WhatsApp</div>
+                  <div class="contact__method-val" data-bind="phone">+1 (809) 123-4567</div>
+                </div>
+              </a>
+
+              <a href="#" data-href="social.linkedin" target="_blank" rel="noopener" class="contact__method">
+                <div class="contact__method-icon" aria-hidden="true">💼</div>
+                <div>
+                  <div class="contact__method-lbl">LinkedIn</div>
+                  <div class="contact__method-val">linkedin.com/in/oscartapia</div>
+                </div>
+              </a>
+
+              <a href="#" data-href="social.behance" target="_blank" rel="noopener" class="contact__method">
+                <div class="contact__method-icon" aria-hidden="true">🎨</div>
+                <div>
+                  <div class="contact__method-lbl">Behance</div>
+                  <div class="contact__method-val">behance.net/oscartapia</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario FormSubmit — sin backend, funciona en Netlify/Vercel/GitHub Pages -->
+          <div class="reveal reveal--d2">
+            <form
+              id="contact-form"
+              action="https://formsubmit.co/oscar@oscartapia.design"
+              method="POST"
+              novalidate
+            >
+              <!-- FormSubmit config (hidden) -->
+              <input type="hidden" name="_subject"  value="Nuevo mensaje desde tu Portfolio">
+              <input type="hidden" name="_template" value="box">
+              <input type="hidden" name="_captcha"  value="false">
+              <input type="hidden" name="_next"     value="https://oscartapia.design#contacto">
+              <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="nombre">Nombre *</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control"
+                    placeholder="Tu nombre" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="empresa">Empresa</label>
+                  <input type="text" id="empresa" name="empresa" class="form-control"
+                    placeholder="Tu empresa" autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-control"
+                  placeholder="tu@email.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="servicio">Servicio de interés</label>
+                <select id="servicio" name="servicio" class="form-control" style="cursor:pointer">
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Branding e Identidad Visual">Branding &amp; Identidad Visual</option>
+                  <option value="Diseño para Redes Sociales">Diseño para Redes Sociales</option>
+                  <option value="Marketing Digital y Google Ads">Marketing Digital &amp; Google Ads</option>
+                  <option value="Community Management">Community Management</option>
+                  <option value="Diseño Web y UI/UX">Diseño Web &amp; UI/UX</option>
+                  <option value="Copywriting y Contenido">Copywriting &amp; Contenido</option>
+                  <option value="IA aplicada al Marketing">IA aplicada al Marketing</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" class="form-control"
+                  placeholder="Cuéntame sobre tu proyecto, objetivos y presupuesto aproximado..."
+                  required minlength="20"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">
+                Enviar mensaje
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#inicio" class="footer__logo">
+          <span data-bind="firstName">Oscar</span><span>.</span><span data-bind="lastName">Tapia</span>
+        </a>
+
+        <nav class="footer__social" aria-label="Redes sociales">
+          <a href="#" data-href="social.linkedin" target="_blank" rel="noopener" class="footer__slink" aria-label="LinkedIn">in</a>
+          <a href="#" data-href="social.behance"  target="_blank" rel="noopener" class="footer__slink" aria-label="Behance">Bē</a>
+          <a href="#" data-href="social.instagram" target="_blank" rel="noopener" class="footer__slink" aria-label="Instagram">IG</a>
+          <a href="#" data-whatsapp class="footer__slink" aria-label="WhatsApp">WA</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © <span id="footer-year">2024</span>
+          <span data-bind="name">Oscar Tapia</span> — Todos los derechos reservados. Diseñado con ✦
+        </p>
+        <nav class="footer__links" aria-label="Links del footer">
+          <a href="#portfolio"  class="footer__link">Portfolio</a>
+          <a href="#servicios"  class="footer__link">Servicios</a>
+          <a href="#contacto"   class="footer__link">Contacto</a>
+          <a href="#" data-href="social.behance" target="_blank" rel="noopener" class="footer__link">Behance</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS — Orden importa: config primero, luego main
+       ============================================================ -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
