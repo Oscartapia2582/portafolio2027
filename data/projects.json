@@ -2,12 +2,12 @@
   "projects": [
     {
       "id": "Cloud-Vision-Solutions",
-      "title": "Identidad Visual",
+      "title": "Cloud-Vision-Solutions",
       "category": "branding",
       "categoryLabel": "Branding",
       "client": "Cloud Vision Solutions",
       "year": "2025",
-      "cover": "Cloud Vision Solutions.jpg",
+      "cover": "assets/projects/Cloud-Vision-Solutions.jpg",
       "coverGradient": "linear-gradient(135deg,#0D1B2E,#1A3A5C)",
       "coverEmoji": "🏢",
       "description": "Rediseño total de identidad visual para empresa tecnológica líder. Logo, sistema de marca, papelería corporativa, guías de uso y activos digitales. El resultado fue un incremento del 40% en reconocimiento de marca en los primeros 3 meses.",
