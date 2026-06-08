@@ -1,13 +1,13 @@
 {
   "projects": [
     {
-      "id": "techcorp-rebrand",
-      "title": "Rebranding Corporativo — TechCorp",
+      "id": "Cloud Vision Solutions",
+      "title": "Identidad Visual",
       "category": "branding",
       "categoryLabel": "Branding",
-      "client": "TechCorp SA",
-      "year": "2024",
-      "cover": "assets/projects/techcorp-cover.jpg",
+      "client": "Cloud Vision Solutions",
+      "year": "2025",
+      "cover": "Cloud Vision Solutions.jpg",
       "coverGradient": "linear-gradient(135deg,#0D1B2E,#1A3A5C)",
       "coverEmoji": "🏢",
       "description": "Rediseño total de identidad visual para empresa tecnológica líder. Logo, sistema de marca, papelería corporativa, guías de uso y activos digitales. El resultado fue un incremento del 40% en reconocimiento de marca en los primeros 3 meses.",
